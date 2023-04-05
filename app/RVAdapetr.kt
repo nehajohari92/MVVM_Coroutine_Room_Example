@@ -1,0 +1,4 @@
+
+
+lass RVAdapetr() :Rec {
+}
