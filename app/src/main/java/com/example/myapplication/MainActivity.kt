@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val recyclerview= findViewById<RecyclerView>(R.id.rv_list)
-        val quotesService= RectofitHelper.getInstance().create(QuotesService::class.java)
-        val repository= quotesRepository(quotesService)
+
+        val repository= (application as ApplicationClass).repository
         mainViewModel= ViewModelProvider(this, ViewModelFactory(repository)).get(MainViewModel::class.java)
 
         mainViewModel.livedataquotes.observe(this, Observer {
