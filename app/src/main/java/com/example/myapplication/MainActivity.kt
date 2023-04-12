@@ -37,6 +37,5 @@ class MainActivity : AppCompatActivity() {
             recyclerview.adapter=adapter
         })
 
-
     }
 }
